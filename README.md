@@ -19,4 +19,5 @@ A practice project I created as I continue to learn the Spring 5 Framework.
     * @Autowired
     * @Qualifier
     * @Primary
+    * @Profile
    * Name as Qualifier (Not recommended for readability issues and can be overridden by @Primary)
