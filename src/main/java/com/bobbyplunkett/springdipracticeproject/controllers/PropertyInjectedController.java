@@ -1,6 +1,6 @@
 package com.bobbyplunkett.springdipracticeproject.controllers;
 
-import com.bobbyplunkett.springdipracticeproject.services.impl.GreetingServiceImpl;
+import com.bobbyplunkett.springdipracticeproject.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
@@ -15,9 +15,9 @@ import org.springframework.stereotype.Controller;
 public class PropertyInjectedController {
 
     @Autowired
-    public GreetingServiceImpl greetingService;
+    public GreetingService greetingServiceImpl; // Can use name in placement of a qualifier in some cases (as in this case)
 
     public String sayHello(){
-        return greetingService.sayGreeting();
+        return greetingServiceImpl.sayGreeting();
     }
 }
