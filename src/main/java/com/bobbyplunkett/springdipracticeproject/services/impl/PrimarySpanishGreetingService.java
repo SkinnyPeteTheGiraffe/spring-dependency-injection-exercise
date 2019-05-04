@@ -1,5 +1,6 @@
 package com.bobbyplunkett.springdipracticeproject.services.impl;
 
+import com.bobbyplunkett.springdipracticeproject.components.GreetingComponent;
 import com.bobbyplunkett.springdipracticeproject.services.GreetingService;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
@@ -17,8 +18,14 @@ import org.springframework.stereotype.Service;
 @Primary
 public class PrimarySpanishGreetingService implements GreetingService {
 
+    private GreetingComponent greetingComponentImpl;
+
+    public PrimarySpanishGreetingService(GreetingComponent greetingComponentImpl) {
+        this.greetingComponentImpl = greetingComponentImpl;
+    }
+
     @Override
     public String sayGreeting() {
-        return "Hola - Del Servicio De Saludo Primario!";
+        return greetingComponentImpl.getSpanishGreeting();
     }
 }
