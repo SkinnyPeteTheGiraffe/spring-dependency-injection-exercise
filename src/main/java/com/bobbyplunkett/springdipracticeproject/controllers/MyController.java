@@ -1,5 +1,6 @@
 package com.bobbyplunkett.springdipracticeproject.controllers;
 
+import com.bobbyplunkett.springdipracticeproject.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -12,9 +13,13 @@ import org.springframework.stereotype.Controller;
 @Controller
 public class MyController {
 
-    public String printHelloWorld() {
-        String helloWorld = "Hello World";
-        System.out.println(helloWorld);
-        return helloWorld;
+    private GreetingService greetingService;
+
+    public MyController(GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
+    public String sayGreeting() {
+        return greetingService.sayGreeting();
     }
 }

@@ -2,6 +2,7 @@ package com.bobbyplunkett.springdipracticeproject.controllers;
 
 import com.bobbyplunkett.springdipracticeproject.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -15,7 +16,8 @@ import org.springframework.stereotype.Controller;
 public class PropertyInjectedController {
 
     @Autowired
-    public GreetingService greetingServiceImpl; // Can use name in placement of a qualifier in some cases (as in this case)
+    @Qualifier("greetingServiceImpl")
+    public GreetingService greetingServiceImpl; // Can use name in placement of a qualifier in some cases (not in this case as we have set a @Primary service)
 
     public String sayHello(){
         return greetingServiceImpl.sayGreeting();

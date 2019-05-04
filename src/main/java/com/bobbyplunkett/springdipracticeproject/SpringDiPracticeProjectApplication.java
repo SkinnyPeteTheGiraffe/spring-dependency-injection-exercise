@@ -16,7 +16,8 @@ public class SpringDiPracticeProjectApplication {
 
         MyController controller = (MyController) ctx.getBean("myController");
 
-        controller.printHelloWorld();
+        // Test Primary Service
+        System.out.println(controller.sayGreeting());
 
         // Test DI Controllers
         System.out.printf("[%s]: %s\n", PropertyInjectedController.class.getSimpleName(), ctx.getBean(PropertyInjectedController.class).sayHello());
