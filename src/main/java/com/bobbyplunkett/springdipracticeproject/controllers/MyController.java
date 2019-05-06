@@ -1,6 +1,6 @@
 package com.bobbyplunkett.springdipracticeproject.controllers;
 
-import com.bobbyplunkett.springdipracticeproject.services.GreetingService;
+import com.bobbyplunkett.services.GreetingService;
 import org.springframework.stereotype.Controller;
 
 /**

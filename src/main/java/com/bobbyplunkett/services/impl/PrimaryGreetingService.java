@@ -1,7 +1,7 @@
-package com.bobbyplunkett.springdipracticeproject.services.impl;
+package com.bobbyplunkett.services.impl;
 
+import com.bobbyplunkett.services.GreetingService;
 import com.bobbyplunkett.springdipracticeproject.components.GreetingComponent;
-import com.bobbyplunkett.springdipracticeproject.services.GreetingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;

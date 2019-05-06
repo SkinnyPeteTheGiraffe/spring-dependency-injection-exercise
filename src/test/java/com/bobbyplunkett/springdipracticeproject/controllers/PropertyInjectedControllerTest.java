@@ -1,6 +1,6 @@
 package com.bobbyplunkett.springdipracticeproject.controllers;
 
-import com.bobbyplunkett.springdipracticeproject.services.impl.GreetingServiceImpl;
+import com.bobbyplunkett.services.impl.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
 

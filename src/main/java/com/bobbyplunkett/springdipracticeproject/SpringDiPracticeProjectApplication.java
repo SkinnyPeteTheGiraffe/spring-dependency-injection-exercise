@@ -7,8 +7,10 @@ import com.bobbyplunkett.springdipracticeproject.controllers.SetterInjectedContr
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"com.bobbyplunkett"})
 public class SpringDiPracticeProjectApplication {
 
     public static void main(String[] args) {

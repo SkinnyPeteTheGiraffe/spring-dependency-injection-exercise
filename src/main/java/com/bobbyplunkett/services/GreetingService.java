@@ -1,4 +1,4 @@
-package com.bobbyplunkett.springdipracticeproject.services;
+package com.bobbyplunkett.services;
 
 /**
  * com.bobbyplunkett.springdipracticeproject.services
